@@ -8,6 +8,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ L’interface UserDetailsService est utilisée pour récupérer des données rel
 méthode appelée loadUserByUsername () qui trouve une entité utilisateur en fonction du nom d’utilisateur et
 peut être remplacée pour personnaliser le processus de recherche de l’utilisateur.
  */
+@Service
 public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
